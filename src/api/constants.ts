@@ -9,3 +9,4 @@ export const PROFILE_EDIT_URL = BASE_URL + "profile/edit"
 export const USER_CONNECTIONS_URL = BASE_URL + "user/connections"
 export const REQUEST_RECEIVED_URL = BASE_URL + "request/received"
 export const REQUEST_REVIEW_URL = (requeststatus: string,requestId: string) => BASE_URL + `request/review/${requeststatus}/${requestId}`
+export const REQUEST_SEND_URL = (requeststatus: string,requestId: string)=> BASE_URL+`request/send/${requeststatus}/${requestId}`
