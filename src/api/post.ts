@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LOGIN_URL, LOGOUT_URL, REQUEST_REVIEW_URL, REQUEST_SEND_URL, WITHCREDENTIALS } from "./constants";
+import { LOGIN_URL, LOGOUT_URL, REQUEST_REVIEW_URL, REQUEST_SEND_URL, SIGNUP_URL, WITHCREDENTIALS } from "./constants";
 
 export const login = async (emailId: string, password: string) => {
   const response = await axios.post(
@@ -23,4 +23,9 @@ export const requestReviwed = async(requeststatus:string,requestId:string)=>{
 export const requestSend = async(requeststatus:string,requestId:string)=>{
   const response = await axios.post(REQUEST_SEND_URL(requeststatus,requestId),{},WITHCREDENTIALS)
   return response.data
+}
+
+export const postSignup = async (firstName: string, emailId: string, password: string) => {
+  const response = await axios.post(SIGNUP_URL, { firstName, emailId, password }, WITHCREDENTIALS);
+  return response.data;
 }

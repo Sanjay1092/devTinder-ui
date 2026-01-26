@@ -17,7 +17,6 @@ const Feed = () => {
       console.log('response:',response);
       
       if(response){
-        console.log("called")
         setUserFeed(removeUser(requestId))
       }
     } catch (error) {

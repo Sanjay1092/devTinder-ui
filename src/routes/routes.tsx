@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import Profile from "../components/profile";
 import Connections from "../components/connections";
 import Requests from "../components/requests";
+import Signup from "../components/signup";
 
 const AppRouter = () => {
   return (
@@ -14,10 +15,10 @@ const AppRouter = () => {
           <Route index element={<Feed />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/signup" element={<div>Signup Page</div>} />
           <Route path="/connections" element={<Connections />} />
           <Route path="/requests" element={<Requests />} />
           </Route>
+          <Route path="/signup" element={<Signup/>} />
        
       </Routes>
     </BrowserRouter>

@@ -16,11 +16,9 @@ const Layout = () => {
         const response = await profileView();
         dispatch(addUser(response));
       } catch (error) {
-        if (error.status === 401) {
+        if (error) {
           navigate("/login");
         }
-
-        console.log(error);
       }
     };
     if (!user) {
